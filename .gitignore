@@ -5,7 +5,7 @@ codebench*
 database*
 image*
 oauth*
-orm*
+orm/*
 orm_mptt*
 pagination*
 plural*
