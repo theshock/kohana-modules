@@ -2,7 +2,7 @@
 This is universal comments module for Kohana 3, which based on build in auth & orm.
 `$model` can be any instance, that can be commented, e.g. article or product
 
-## MySQL dump:
+### MySQL dump:
 
 	CREATE TABLE `comments` (
 	  `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -18,19 +18,19 @@ This is universal comments module for Kohana 3, which based on build in auth & o
 	  KEY `user_id` (`author_id`)
 	) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-## Render comments in view
+### Render comments in view
 
 	Comments::render($model);
 
-## Render add comment form in view
+### Render add comment form in view
 
 	Comments::form($model);
 
-## Render edit comment form in view
+### Render edit comment form in view
 
 	Comments::form($model, $id);
 
-## Get all comments for model
+### Get all comments for model
 
 	$comments = Comments::get($model);
 	// you can build query with result:
@@ -40,7 +40,7 @@ This is universal comments module for Kohana 3, which based on build in auth & o
 
 # Some tricks
 
-## Admin can post with another name:
+### Admin can comment with another name:
 
 	class Comments extends Kohana_Comments {
 		protected function can_set_username() {
