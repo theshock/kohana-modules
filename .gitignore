@@ -6,7 +6,7 @@ database*
 image*
 oauth*
 orm/*
-orm_mptt*
+orm-mptt*
 pagination*
 plural*
 unittest*
