@@ -1,0 +1,1 @@
+<?php class Model_Comment extends Kohana_Model_Comment {}

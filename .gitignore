@@ -1,0 +1,13 @@
+# list of default plugins:
+auth*
+cache*
+codebench*
+database*
+image*
+oauth*
+orm*
+orm_mptt*
+pagination*
+plural*
+unittest*
+userguide*
