@@ -8,10 +8,12 @@ Based on build-in ORM and Auth modules for commenting any model. Just add this i
 	Comments::render($article);
 	Comments::form($article);
 
-### [LessCSS](http://lesscss.org/)
+### LessCSS
+Easy [LessCSS](http://lesscss.org/) compiler
 	LessCSS::compileAll();
 
-### [Markdown](http://daringfireball.net/projects/markdown/)
+### Markdown
+Easy [Markdown](http://daringfireball.net/projects/markdown/) compiler
 	$markdown_text = Markdown::parse($text);
 
 ### ORM Materialized Path
