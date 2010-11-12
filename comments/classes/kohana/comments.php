@@ -46,6 +46,8 @@ class Kohana_Comments {
 	}
 
 	public function form_view ($id = null) {
+		if (!$this->can_comment()) return $this->cant_comment_view();
+
 		$view = new View('comments/form');
 
 		$comment = $this->find_comment($id);
@@ -70,7 +72,7 @@ class Kohana_Comments {
 	protected function try_save_comment (Model_Comment $comment) {
 		$form = $this->get_post();
 
-		if ($form['username'] === null) return null;
+		if ($form['content'] === null || !$this->can_comment()) return null;
 
 		if ($comment->values($form)->check()) {
 			$this->set_modified($comment)->save();
@@ -124,8 +126,15 @@ class Kohana_Comments {
 		$comment->model_name = $this->model['name'];
 	}
 
+	protected function cant_comment_view () {
+		return '';
+	}
+
+	protected function can_comment() {
+		return true;
+	}
+
 	protected function can_set_username() {
-		echo 'xyyz';
 		return !$this->auth->logged_in();
 	}
 
