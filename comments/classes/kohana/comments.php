@@ -89,8 +89,7 @@ class Kohana_Comments {
 	}
 
 	protected function redirect (Model_Comment $comment) {
-		$r = Request::instance();
-		$r->redirect($r->uri);
+		HTTP::redirect(Request::current()->uri());
 	}
 
 	protected function find_comment ($id) {
