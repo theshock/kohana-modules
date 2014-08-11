@@ -28,7 +28,7 @@ class Kohana_Comments {
 	public function __construct(ORM $model) {
 		$this->auth  = Auth::instance();
 		$this->model = array (
-			'id'   => $model->id,
+			'id'   => $model->pk(),
 			'name' => $model->object_name()
 		);
 	}
